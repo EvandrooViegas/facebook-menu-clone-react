@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-neutral-900
+}
+.slide-left {
+    animation: oldSlideLeft .2s linear alternate;
+}
+.new-slide-left {
+    animation: newSlideLeft .3s linear alternate;
+}
+.back-slide {
+    animation: backSlide .5s linear alternate;
+
+}
+@keyframes backSlide {
+    from {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes oldSlideLeft {
+    from {
+        transform: translateX(0px);
+
+    }
+    to {
+        transform: translateX(100px);
+
+
+    }
+}
+@keyframes newSlideLeft {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
